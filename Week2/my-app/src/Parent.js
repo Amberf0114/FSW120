@@ -12,7 +12,7 @@ function Parent(props) {
   }
   return (
     <div className="parent">
-      <title>{props.fileInfo.title}</title>
+      <h1>{props.fileInfo.title}</h1>
       <sub style={styleObj}>{props.fileInfo.subtitle}</sub>
       <p style={bodyStyleObj}>{props.fileInfo.information}</p>
     </div>
