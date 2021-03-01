@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import VacaArray from './VacaArray'
+import VacaParent from './VacaParent'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+        const VacaComponents = VacaArray.map(vaca => <VacaParent myPlace={vaca.place} price={vaca.price} timeToGo = {vaca.timeToGo} />)
 
-export default App;
+    return (
+       <div>
+           {VacaComponents}
+       </div>
+    )
+}
+export default App
