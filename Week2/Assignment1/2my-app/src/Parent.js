@@ -2,18 +2,16 @@ import React from "react";
 
 function Parent(props) {
   const styleObj={
-    backgroundColor: "lavender",
-    fontSize: "25px",
-    fontWeight: "bold"
+    backgroundColor: "lavender"
   }
   const bodyStyleObj={
     fontSize: "14px",
     fontFamily: "sans-serif"
   }
   return (
-    <div className="parent">
+    <div className="parent"  style={props.fileInfo.bColor}>
       <h1>{props.fileInfo.title}</h1>
-      <sub style={styleObj}>{props.fileInfo.subtitle}</sub>
+      <sub>{props.fileInfo.subtitle}</sub>
       <p style={bodyStyleObj}>{props.fileInfo.information}</p>
     </div>
   );
