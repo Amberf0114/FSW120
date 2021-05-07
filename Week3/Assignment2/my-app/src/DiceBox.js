@@ -16,13 +16,28 @@ class DiceBox extends React.Component {
         }
     }
 
+    selected = (e) => {
+        let selected = [...this.state.selected]
+        switch(e){
+            case "0":
+                selected[0] = true
+                this.setState({selected})
+                break;
+
+            case "1":
+                selected[1] = true
+                this.setState({selected})
+                break;
+        }
+    };
+
     roll = () => {
         if(this.state.rounds < 3) {
-            let die1 = (this.state.num1)
-            let die2 = (this.state.num2)
-            let die3 = (this.state.num3)
-            let die4 = (this.state.num4)
-            let die5 = (this.state.num5)
+            let die1 = [this.state.num1]
+            let die2 = [this.state.num2]
+            let die3 = [this.state.num3]
+            let die4 = [this.state.num4]
+            let die5 = [this.state.num5]
             if (!this.state.selected[0]) {die1 = (Math.floor(Math.random()*6))}
             if (!this.state.selected[1]) {die2 = (Math.floor(Math.random()*6))}
             if (!this.state.selected[2]) {die3 = (Math.floor(Math.random()*6))}
@@ -56,22 +71,17 @@ class DiceBox extends React.Component {
         })
     }
 
-    // selected = ()=> {
-    //     if (this.state.rounds <3){
-
-    //     }
-    // }
 
     render(){
        
         return(
             <div className='master-container'>
                 <div className='numbers'>
-                    <Die num= {this.state.num1}/>
-                    <Die num= {this.state.num2}/>
-                    <Die num= {this.state.num3}/>
-                    <Die num= {this.state.num4}/>
-                    <Die num= {this.state.num5}/>
+                    <Die num= {this.state.num1} id='1' selected= {this.selected}/>
+                    <Die num= {this.state.num2} id='2' selected= {this.selected}/>
+                    <Die num= {this.state.num3} id='3' selected= {this.selected} />
+                    <Die num= {this.state.num4} id='4' selected= {this.selected} />
+                    <Die num= {this.state.num5} id='5' selected= {this.selected} />
                 </div> 
                
                 <div className='button-container'>
