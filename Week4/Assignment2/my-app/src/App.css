@@ -1,0 +1,24 @@
+.App {
+    border: 2px solid black;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.span {
+    grid-column: span 2;
+}
+
+input {
+    margin : 3%;
+    padding: 1%;
+}
+
+textarea {
+    padding: 5%;
+}
+
+.btn {
+    align-items: center;
+}

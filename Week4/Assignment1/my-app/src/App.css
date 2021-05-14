@@ -1,0 +1,21 @@
+*{
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+#container{
+    border: 3px solid rgb(70, 9, 9);
+    margin-left: 200px;
+    margin-right: 200px;
+
+
+}
+
+ol{
+    list-style: none;
+    text-decoration: none;
+    line-height: 5px;
+}
