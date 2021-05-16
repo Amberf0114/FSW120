@@ -22,3 +22,19 @@ textarea {
 .btn {
     align-items: center;
 }
+
+
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 5px solid black;
+    padding: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    line-height: 55px;
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
