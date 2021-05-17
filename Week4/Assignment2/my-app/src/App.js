@@ -99,6 +99,8 @@ class App extends React.Component {
         <div id='birthplace'> {this.state.newName[3]}</div>
         <div id='phone'>{this.state.newName[4]}</div>
         <div id='favFood'>{this.state.newName[5]}</div>
+        <div id='favFood'>{this.state.newName[6]}</div>
+        
 
        </div>
        
