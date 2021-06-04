@@ -41,19 +41,7 @@ class BlogPost extends React.Component {
             authorName: ''
         })
         }
-        // if(this.state.postContent.length > 0 
-        //     && this.state.authorName.length > 0){
-        //         const completePost = [...this.state.completePost]
-        //         completePost.push(this.state.postContent + ' By: ' + this.state.authorName)
-               
-        //         this.setState({completePost})
 
-        //         this.setState({postContent: ''})
-        //         this.setState({authorName: ''})
-
-        //         console.log(completePost)
-        // }}    
- // SET VALUES BACK TO EMPTY XXX
         
 
     render(){
@@ -82,14 +70,16 @@ class BlogPost extends React.Component {
                         name='submit'
                         >Publish
                     </button>
-
                 </form>
                 
                 {this.state.posts.map((post, index) => 
-                    <div key={index}>
-                        <Post postContent={post.postContent.value} authorName={post.authorName.value}/>
+                    <div id='post' key={index}>
+                        <hr/>
+                        <Post post={post} />
+                        <hr />
                     </div>
                 )}
+
 
             </div>
         )
@@ -99,4 +89,3 @@ class BlogPost extends React.Component {
 
 export default BlogPost
 
-//onClick={document.getElementById('form').value=''}

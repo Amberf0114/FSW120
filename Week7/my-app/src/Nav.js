@@ -4,7 +4,7 @@ import './Nav.css'
 const Nav = () => {
     return(
         <nav className='navbar'>
-            <ul>
+            <ul className='links'>
                <li><Link to='/'>Login</Link></li>
                <li><Link to='/abcdefgsecure'>UnFiltered</Link></li>
             </ul>
